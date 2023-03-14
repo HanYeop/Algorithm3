@@ -27,7 +27,7 @@ public class Main {
 
         while (lo <= hi){
             long sum = 0;
-            int mid = (lo + hi) / 2;
+            int mid = (lo + hi) >> 1;
 
             for (int i: arr){
                 sum += Math.min(mid, i);
