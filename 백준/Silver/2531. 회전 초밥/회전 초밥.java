@@ -39,17 +39,16 @@ public class Main {
         for(int i = 0; i < k; i++){
             int cur = arr[i];
             map.put(cur, map.getOrDefault(cur, 0) + 1);
-//            map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
         }
 
         for(int i = k; i < n + k; i++){
             result = Math.max(result, map.size());
 
-            int before = i - k;
-            if(map.get(arr[before]) == 1){
-                map.remove(arr[before]);
+            int before = arr[i - k];
+            if(map.get(before) == 1){
+                map.remove(before);
             }else{
-                map.put(arr[before], map.get(arr[before]) - 1);
+                map.put(before, map.get(before) - 1);
             }
 
             map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
