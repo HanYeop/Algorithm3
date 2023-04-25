@@ -37,9 +37,9 @@ public class Main {
         // 쿠폰 지급
         map.put(c, 1);
         for(int i = 0; i < k; i++){
-//            int cur = arr[i];
-//            map.put(cur, map.getOrDefault(cur, 0) + 1);
-            map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
+            int cur = arr[i];
+            map.put(cur, map.getOrDefault(cur, 0) + 1);
+//            map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
         }
 
         for(int i = k; i < n + k; i++){
